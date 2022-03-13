@@ -1,0 +1,16 @@
+<div class="cart" *ngIf="showCart">
+    <button *ngIf="cartArray.length > 1" (click)="deleteCart()" mat-fab color="primary">
+        <mat-icon 
+        matTooltip="clean cart">delete</mat-icon>
+      </button>
+    <div class="cards-container">
+        <app-cart-item *ngFor="let item of cartArray" [item]="item" (deleteItem)="removeItem(item)" (updateItem)="update(item)">
+        </app-cart-item>
+    </div>
+    <div class="cart-details">
+        <p><strong>Total price</strong>: {{totalPrice | number:"1.2-2"}}</p>
+    </div>
+    <div class="pay-for-cart-btn" *ngIf="cartArray.length > 0">
+        <button mat-flat-button (click)="makeOrder()">Take Order</button>
+    </div>
+</div>

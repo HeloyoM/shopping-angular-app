@@ -1,0 +1,188 @@
+.order-details {
+    border: 1px solid #b4b8bb;
+    border-radius: 11px;
+    text-align: center;
+    overflow-y: scroll;
+    height: 450px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orderlist-header {
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid #ff4081;
+}
+
+.orderlist-header h3 {
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.close-order-list {
+    float: right;
+    cursor: pointer;
+    color: #ff4081;
+}
+
+.close-order-list:hover {
+    color: rgb(71, 104, 71);
+}
+
+.search-field {
+    font-size: 14px;
+}
+
+.search-field input {
+    caret-color: #ff4081;
+    height: 25px;
+    width: 100%;
+}
+
+.search-field input:hover {
+    border: none;
+}
+
+.order-table {
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.total-shopping-price {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ff4081;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.submit-order button {
+    margin-bottom: 10px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    width: 365px;
+    margin-top: 5px;
+    background-color: #008078;
+    position: relative;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.payment-form {
+    border: 1px solid lightgrey;
+    margin-top: 35px;
+    position: absolute;
+    padding: 20px;
+    left: 43%;
+    right: 40%;
+    top: 98%;
+    transform: translate(-30%, -30%);
+    height: 530px;
+    width: 515px;
+    border-radius: 5px;
+    background-color: rgb(252, 255, 227);
+    color: #363e48;
+}
+
+.payment-form-header {
+    height: 80px;
+    width: 100%;
+    border-bottom: 0.5px solid lightblue;
+}
+
+.payment-form-header p {
+    margin-left: 30px;
+    padding-top: 30px;
+    font-family: Proxima;
+    font-size: 18px;
+}
+
+.payment-form-input input {
+    width: 350px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: left;
+    margin: 16px 3px 10px 5px;
+    font-size: 14px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.card-details {
+    display: flex;
+}
+
+.card-details input {
+    width: 150px;
+    height: 35px;
+    margin: 16px 3px 10px 5px;
+    border-radius: 3px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+input[type="text"]:hover {
+    border: none;
+}
+
+.alert {
+    color: red;
+}
+
+.submit-div button {
+    margin-left: 74px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    width: 365px;
+    margin-top: 5px;
+    background-color: #008078;
+    position: relative;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    cursor: default;
+}
+
+.userSearch {
+    background-color: yellow;
+}
+
+.sendPayment {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    height: 60px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}

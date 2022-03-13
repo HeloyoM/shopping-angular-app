@@ -1,0 +1,85 @@
+.cart-item {
+    height: 122px;
+    width: 476px;
+    border-radius: 30px;
+    display: inline-flex;
+    text-align: center;
+    margin: 15px 8px 16px;
+    line-height: 18px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.counter {
+    margin-top: 70px;
+    position: absolute;
+    left: 90%;
+    right: 90%;
+    top: 10%;
+    transform: translate(-70%, -70%);
+}
+
+.min-icon:hover {
+    color: red;
+}
+
+.add-icon:hover {
+    color: green;
+}
+
+.min-icon,
+.add-icon {
+    cursor: pointer;
+    align-items: center;
+}
+
+.min-icon {
+    margin-bottom: 20px;
+}
+
+.counter>p {
+    width: 30px;
+    height: 20px;
+    border: none;
+    font-size: 20px;
+    color: #2f416e;
+}
+
+.cart-item img {
+    height: 90px;
+    width: 90px;
+    border-right: 1px solid rgb(221, 233, 240);
+}
+
+.mat-card-title {
+    font-size: 22px;
+    margin-left: 15px;
+    position: absolute;
+    left: 56%;
+    top: 50%;
+    transform: translate(-70%, -70%);
+}
+
+.mat-card-subtitle {
+    font-size: 21px;
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    transform: translate(-70%, -70%);
+}
+
+.delete-item {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.delete-item mat-icon {
+    font-size: 28px;
+    color: #ff4081;
+    position: absolute;
+    left: 87%;
+    top: 27%;
+    transform: translate(-70%, -70%);
+}

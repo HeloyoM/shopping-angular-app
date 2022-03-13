@@ -1,0 +1,20 @@
+<mat-card class="cart-item">
+    <img mat-card-sm-image src="{{item.image}}" />
+    <header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{item.name}}</mat-card-title><br>
+        <mat-card-subtitle><strong>₪ {{item.price}}</strong></mat-card-subtitle>
+    </header>
+    <span class="spacer"></span>
+
+    <div class="counter">
+        <mat-icon class="min-icon" (click)="min(item)">minimize</mat-icon>
+        <p>{{item.amount}}</p>
+        <mat-icon class="add-icon" (click)="max(item)">add</mat-icon>
+    </div>
+
+    <div class="delete-item">
+        <mat-icon matTooltip="remove" (click)="deleteItemFromCart(item)">delete</mat-icon>
+    </div>
+
+</mat-card>

@@ -1,0 +1,97 @@
+<div class="order-details">
+
+    <div class="orderlist-header">
+        <div class="close-order-list">
+            <mat-icon matTooltip="return" routerLink="/home" (click)="deleteInvoicing()">close</mat-icon>
+        </div>
+        <h3>Order Details</h3>
+    </div>
+
+    <div class="search-field">
+        <mat-form-field>
+            <input matInput type="text" maxlength="20" [(ngModel)]="userSearch">
+        </mat-form-field>
+    </div>
+
+    <div class="order-table">
+        <table id="excel-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let product of orderArray | searchPipe :userSearch">
+                <tr>
+                    <td [ngClass]="{'userSearch' :userSearch}">{{product.name}}</td>
+                    <td>₪ {{product.price}}</td>
+                    <td>{{product.amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total-shopping-price">Total Price: ₪ {{totalPrice | number:"1.2-2"}}</div>
+    </div>
+
+    <div class="submit-order">
+        <button mat-flat-button (click)="pay()">Submit</button>
+    </div>
+
+</div>
+
+<div class="payment-details-inputs">
+
+    <form #paymentForm="ngForm" *ngIf="showPaymentPart" class="payment-form">
+
+        <div class="payment-form-header">
+            <p>Credit or Debit Card</p>
+        </div>
+        <div class="payment-form-input">
+            <mat-form-field>
+                <mat-label>*Name on Card</mat-label>
+                <input matInput ngModel #nameOnCardInput="ngModel" (input)="setName($event)" name="nameOnCard" type="text" required>
+            </mat-form-field><br>
+            <div class="alert " *ngIf="nameOnCardInput.touched && !nameOnCardInput.valid ">
+                <div *ngIf="nameOnCardInput.errors">Name on Card is required .</div>
+            </div>
+
+            <mat-form-field>
+                <mat-label>*Card Number</mat-label>
+                <input matInput ngModel #cardNumberInput="ngModel" (input)="setCardNumber($event)" placeholder="1234 1234 1234 1234" name="cardNumber" type="text" required>
+            </mat-form-field>
+            <div class="alert" *ngIf="cardNumberInput.touched && !cardNumberInput.valid">
+                <div *ngIf="cardNumberInput.errors ">Card number is required .</div>
+            </div>
+        </div>
+
+        <div class="card-details">
+            <mat-form-field>
+                <mat-label>*Expiration Date</mat-label>
+                <input matInput ngModel #expirationDateInput="ngModel" (input)="setExpirationDate($event)" name="expirationDate" placeholder="MM / YY" type="text" required>
+            </mat-form-field>
+            <div class="alert" *ngIf="expirationDateInput.touched && !expirationDateInput.valid ">
+                <div *ngIf="expirationDateInput.errors ">Expiration date is required .</div>
+            </div>
+
+            <mat-form-field>
+                <mat-label>*CVC Code</mat-label>
+                <input matInput ngModel #cvcInput="ngModel" (keyup)="setCvc($event)" name="cvc" placeholder="CVC" [minlength]="3" type="text " required>
+            </mat-form-field>
+            <div class="alert" *ngIf="cvcInput.touched && !cvcInput.valid">
+                <div *ngIf="cvcInput.errors ">CVC is required .</div>
+            </div>
+        </div>
+
+
+        <div class="submit-div">
+            <button [disabled]="paymentForm.form.invalid" (click)="getPayment()" mat-flat-button>Submit</button>
+        </div>
+
+        <div class="sendPayment" *ngIf="sendPayment">
+            Sending payment details ...
+        </div>
+
+        <app-download-file></app-download-file>
+
+    </form>
+</div>

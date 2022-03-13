@@ -1,0 +1,8 @@
+<div *ngIf="uiService.showFile" class="showFile">
+    <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+        <mat-icon (click)="exportexcel()" matTooltip="download file">bookmark</mat-icon>
+      </button>
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon routerLink="/home" (click)="backHome()" matTooltip="home page">home</mat-icon>
+      </button>
+</div>

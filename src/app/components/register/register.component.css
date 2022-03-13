@@ -1,0 +1,95 @@
+.register-form {
+    position: absolute;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+    height: 479px;
+    width: 412px;
+    left: 75%;
+    top: 71%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.register-form-header {
+    margin-top: 15px;
+    font-size: 1.25em;
+    color: #1a1a1a;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.register-form input {
+    width: 350px;
+    height: 35px;
+    margin: 11px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    text-align: left;
+    font-size: 14px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+input[type="text"]:hover {
+    border: 1px solid rgb(41, 40, 40);
+}
+
+.register-form-password p {
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 19px;
+    height: 20px;
+    color: black;
+    margin-top: 5px;
+}
+
+.signup-button button {
+    height: 40px;
+    font-size: 17px;
+    color: white;
+    width: 365px;
+    background-color: #008078;
+    position: relative;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    cursor: default;
+}
+
+.signup-button button:hover {
+    background-color: rgb(72, 74, 75);
+}
+
+.alert {
+    color: red;
+    padding: 0;
+}
+
+.goodName {
+    color: green;
+}
+
+.badInput {
+    color: red;
+}
+
+i {
+    position: relative;
+}
+
+.register-form-name img {
+    width: 22px;
+    height: 22px;
+}
+
+.wallpaper {
+    width: 1516px;
+    height: 1900px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/02/54/84/01/1000_F_254840132_fpRsTo0Gfzg3HRTSDqpCunbAd1kWPOZv.jpg");
+}
+
+.wallpaper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}

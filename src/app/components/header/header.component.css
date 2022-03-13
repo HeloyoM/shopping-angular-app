@@ -1,0 +1,23 @@
+.header {
+    top: 0;
+    height: 67px;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    outline: 0;
+    box-shadow: 1px 1px 11px 1px lightgrey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1.5px solid lightgrey;
+    border-top: 1.5px solid lightgrey;
+    position: sticky;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}

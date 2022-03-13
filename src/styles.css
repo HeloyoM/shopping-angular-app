@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink";
+.register-form {
+    position: absolute;
+    border: 1px solid rgb(180, 184, 187);
+    text-align: center;
+    border-radius: 5px;
+    height: 550px;
+    width: 412px;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-form-header {
+    margin-top: 15px;
+    font-size: 1.25em;
+    color: #1a1a1a;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.register-form input {
+    width: 350px;
+    height: 35px;
+    margin: 6px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+input[type="text"]:hover {
+    border: 1px solid rgb(41, 40, 40);
+}
+
+.register-form-password p {
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 19px;
+    height: 20px;
+    color: #919191;
+    margin-top: 5px;
+}
+
+.signup-button button {
+    height: 40px;
+    font-size: 17px;
+    color: white;
+    width: 365px;
+    margin-top: 5px;
+    background-color: #008078;
+    position: relative;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    cursor: default;
+}
+
+.signup-button button:hover {
+    background-color: rgb(72, 74, 75);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #ff4081;
+    border-radius: 10px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,60 @@
+<div class="profile-header">
+    <h2>Edit Profile</h2>
+</div>
+<div class="profile">
+
+    <form editUserDetails="ngForm">
+
+        <p>Username</p>
+        <input ngModel #usernameRef #username="ngModel" type="text" name="username" (keyup)="setUsername($event)">
+        <i *ngIf="goodUsername"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png"></i>
+        <i *ngIf="badUsername"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt=""></i>
+
+        <p>Email</p>
+        <input ngModel #emailRef #email="ngModel" type="text" name="email" (change)="setEmail($event)"><i *ngIf="emailInUse"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt=""></i>
+
+
+        <p>Phone</p>
+        <input ngModel #phoneRef #phone="ngModel" type="text" name="phone" (change)="setPhone($event)">
+
+        <div class="location-details">
+            <h3>My address</h3>
+            <div *ngIf="locationDetails">
+                <mat-card class="location-card">
+                    <div class="remove-location-details">
+                        <mat-icon (click)="removeLocationDetails()">close</mat-icon>
+                    </div>
+                    <mat-card-title-group>
+                        <mat-card-title>{{user[0].firstName}} {{user[0].lastName}}</mat-card-title>
+                        <mat-card-subtitle>{{user[0].address}}</mat-card-subtitle>
+                    </mat-card-title-group>
+                    <mat-card-content>
+                        {{user[0].city}}
+                    </mat-card-content>
+                    <mat-card-subtitle>{{user[0].phone}}</mat-card-subtitle>
+                </mat-card>
+            </div>
+            <div *ngIf="addLocation">
+                <mat-card class="location-card">
+                    <mat-card-title class="add-location-data">
+                        <img (click)="add()" matTooltip="add new address" src="https://cdn-icons.flaticon.com/png/512/4315/premium/4315609.png?token=exp=1644154881~hmac=1789d3dda041931f59c8a9599fe85c8a" alt="">
+                    </mat-card-title>
+                </mat-card>
+            </div>
+            <div *ngIf="locationForm">
+                <mat-card class="location-form">
+                    <mat-form-field>
+                        <mat-label>City:</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let city of cities" (click)="setCity(city)" value="{{city}}">{{city}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <input type="text" placeholder="Steert" (change)="setAddress($event)">
+                    <button (click)="saveLocation()">save</button>
+                </mat-card>
+            </div>
+        </div>
+        <div class="update-details-btn">
+            <button (click)="save()" mat-button color="accent">Update</button>
+        </div>
+    </form>

@@ -1,0 +1,36 @@
+<div class="login-container">
+    <h2 class="login-header">Log In</h2>
+    <form #loginForm="ngForm">
+
+        <div calss="user-name">
+            <input ngModel #usernameInput="ngModel" name="username" (change)="username($event)" type="text" placeholder="Email or username" minlength="4" required>
+            <div class="alert" *ngIf="usernameInput?.touched && !usernameInput?.valid">
+                <span *ngIf="usernameInput?.errors?.['minlength']">username should be minimun {{usernameInput?.errors?.['minlength'].requiredLength}} characters</span>
+                <span *ngIf="usernameInput?.errors">username is required .</span>
+            </div>
+        </div>
+
+        <div class="password">
+            <input ngModel #passwordInput="ngModel" name="password" (change)="password($event)" type="password" placeholder="Password" maxlength="10" required>
+            <div class="alert" *ngIf="passwordInput?.touched && !passwordInput?.valid">
+                <span *ngIf="passwordInput?.errors">password is required .</span>
+            </div>
+        </div>
+
+        <div class="login-button">
+            <button mat-flat-button [disabled]="loginForm.form.invalid" (click)="login()" routerLink="/home">Log In</button>
+        </div>
+        <div class="forgot">
+            <a>Forgot your username or password</a>
+        </div>
+    </form>
+
+    <div class="or-separate">
+        <p>OR</p>
+    </div>
+
+    <div class="signup">
+        <a routerLink="/register" (click)="hidePanels()">Sign up now ›</a>
+    </div>
+
+</div>

@@ -1,0 +1,161 @@
+.card {
+    height: 139px;
+    width: 464px;
+    box-shadow: 0 3px 16px 7px rgba(196, 196, 196, 0.445);
+    display: inline-block;
+    text-align: center;
+    border-radius: 28px;
+    margin: 26px 100px 50px 124px;
+    line-height: 18px;
+    padding: 10px;
+}
+
+.card:hover {
+    border: 3px solid orange;
+}
+
+.spacer {
+    width: 100px;
+    height: 100px;
+}
+
+.add-item-to-cart {
+    width: 52px;
+    height: 52px;
+    box-shadow: 1px 1px 2px 1px lightgray;
+    background-color: #ff4081;
+    border-radius: 35px;
+    color: #3af219;
+    position: absolute;
+    left: 83%;
+    top: 36%;
+    transform: translate(-70%, -70%);
+}
+
+.add-item-to-cart mat-icon {
+    font-size: 32px;
+    position: absolute;
+    left: 53%;
+    top: 52%;
+    transform: translate(-70%, -70%);
+}
+
+.cart-icon {
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    color: rgb(36, 106, 129);
+}
+
+.counter {
+    margin-top: 70px;
+    position: absolute;
+    left: 94%;
+    top: 7%;
+    transform: translate(-70%, -70%);
+}
+
+.min-icon:hover {
+    color: red;
+}
+
+.add-icon:hover {
+    color: rgb(2, 185, 2);
+}
+
+.counter mat-icon {
+    font-size: 26px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.min-icon {
+    position: absolute;
+    right: 83%;
+    bottom: 30%;
+    transform: translate(47%, -200%);
+}
+
+.add-icon {
+    position: absolute;
+    left: 20%;
+    top: 63%;
+    transform: translate(-55%, 71%);
+}
+
+.amount {
+    border: 0.5px solid black;
+    border-radius: 9px;
+    width: 30px;
+    height: 41px;
+    font-size: 22px;
+    color: #029ffa;
+    position: absolute;
+    right: 83%;
+    top: 63%;
+    transform: translate(49%, -70%);
+}
+
+.amount>p {
+    position: absolute;
+    right: 49%;
+    top: 62%;
+    transform: translate(49%, -70%);
+}
+
+.card-img {
+    width: 152px;
+    height: 120px;
+}
+
+.card img {
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    padding-right: 10px;
+    height: 100%;
+    width: 100%;
+    border-right: 2.5px solid #ff4081;
+    background-repeat: no-repeat;
+}
+
+.mat-card-title {
+    font-size: 25px;
+    position: absolute;
+    left: 64%;
+    top: 45%;
+    transform: translate(-70%, -70%);
+    font-weight: 350;
+    color: rgb(137, 146, 3);
+}
+
+.mat-card-subtitle {
+    font-size: 21px;
+    position: absolute;
+    left: 49%;
+    top: 92%;
+    transform: translate(-70%, -70%);
+    font-weight: 375;
+    color: #1579f2;
+}
+
+.toast {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    height: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px
+}

@@ -1,0 +1,47 @@
+<div class="jumbotron" *ngIf='hasRoute("/home")'>
+
+    <div class="alert alert-success register-link" role="alert" *ngIf="guestEntered">
+        hello guest click here to start shopping - ->
+        <a routerLink="/register" class="alert-link">register</a>
+    </div>
+    <div class="jumbotroe-img">
+        <img src="https://media.istockphoto.com/photos/unrecognizable-supermarket-aisle-as-background-picture-id1265272573?b=1&k=20&m=1265272573&s=170667a&w=0&h=vnTLsLiki_HxXVr8MlQBKOqTn8rLx30M63_-2XNVroc=" alt=" ">
+    </div>
+</div>
+
+<div class="jumbotron" *ngIf='hasRoute("/home/grocery-products")'>
+    <div class="jumbotroe-img ">
+        <img src="https://as1.ftcdn.net/v2/jpg/03/93/41/64/1000_F_393416471_4EZnONH9ivX5oVjSksHlgy0GCRvvf1Ma.jpg" alt="">
+    </div>
+</div>
+
+<div class="jumbotron" *ngIf='hasRoute("/home/cheese-and-dairy")'>
+    <div class="jumbotroe-img ">
+        <img src="https://t4.ftcdn.net/jpg/01/15/24/45/240_F_115244523_HPiVrhi0VccTb3Xbs6Hdc0MgMoLQplsx.jpg" alt="">
+    </div>
+</div>
+
+<div class="jumbotron" *ngIf='hasRoute("/home/meat-and-fish")'>
+    <div class="jumbotroe-img">
+        <img src="https://as2.ftcdn.net/v2/jpg/01/95/96/89/1000_F_195968967_hQ9i5wmSNTQAH9xgvyqzNONPwTvLSRdz.jpg" alt="">
+    </div>
+</div>
+
+<div class="jumbotron" *ngIf='hasRoute("/home/cleaners")'>
+    <div class="jumbotroe-img ">
+        <img src="https://learn.compactappliance.com/wp-content/uploads/2018/02/cleaning-products.jpg" alt="">
+    </div>
+</div>
+
+<div class="jumbotron" *ngIf='hasRoute("/home/fruits-and-vegetables")'>
+    <div class="jumbotroe-img">
+        <img src="https://as2.ftcdn.net/v2/jpg/00/67/18/43/1000_F_67184349_ovvD9ZaQlFAWs8yJi8XCcQBynWAzCeJr.jpg" alt="">
+    </div>
+
+</div>
+
+<div class="jumbotron " *ngIf='hasRoute("/home/snacks-and-sweets")'>
+    <div class="jumbotroe-img">
+        <img src="https://as2.ftcdn.net/v2/jpg/01/00/57/27/1000_F_100572771_J4wB7xWydIBc8kVvAzPU6i52uCGQIPMS.jpg" alt="">
+    </div>
+</div>

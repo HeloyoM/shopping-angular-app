@@ -1,0 +1,5 @@
+<div class="menu" *ngIf="showMenu">
+    <a *ngFor="let link of links; let i = index" routerLink="/home/{{link}}">
+        <button mat-button color="accent" (click)="categoryName(link, i)">{{link}}</button>
+    </a>
+</div>

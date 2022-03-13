@@ -1,0 +1,25 @@
+<mat-card class="card">
+    <div class="card-img">
+        <img mat-card-sm-image src="{{product.image}}" />
+    </div>
+    <header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{product.name}}</mat-card-title><br>
+        <mat-card-subtitle><strong>₪ {{product.price | number:"1.2-2"}}</strong></mat-card-subtitle>
+    </header>
+    <span class="spacer"></span>
+    <div class="add-item-to-cart">
+        <mat-icon matTooltip="add" class="cart-icon" (click)="addItem(product)">add_shopping_cart</mat-icon>
+    </div>
+
+    <div class="counter">
+        <mat-icon class="min-icon" (click)="min(product)">minimize</mat-icon>
+        <div class="amount">
+            <p>{{amount}}</p>
+        </div>
+        <mat-icon class="add-icon" (click)="max(product)">add</mat-icon>
+    </div>
+
+</mat-card>
+
+<div class="toast" *ngIf="cartService.showToast">You allready added this product .</div>

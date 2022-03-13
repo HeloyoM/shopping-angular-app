@@ -1,0 +1,22 @@
+.cards-container {
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 619px;
+    width: 91%;
+    display: inline-block;
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: rgb(0, 140, 255);
+    font-weight: 500;
+    position: absolute;
+    left: 39%;
+    top: 117%;
+    transform: translate(-70%, -70%);
+}

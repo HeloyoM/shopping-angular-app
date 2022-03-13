@@ -1,0 +1,130 @@
+.profile-header {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 32%;
+    left: 38%;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.profile {
+    border: 1px solid red;
+    padding: 35px;
+    width: 524px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    border-color: rgb(226 232 240/var(--tw-border-opacity));
+}
+
+.profile input {
+    width: 85%;
+    height: 35px;
+    margin: 6px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.profile input[name="username"] {
+    width: 250px;
+}
+
+.profile p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile img {
+    width: 22px;
+    height: 22px;
+}
+
+.location-details {
+    margin-top: 32px;
+}
+
+.location-card {
+    width: 240px;
+    height: 138px;
+}
+
+mat-card-title {
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    color: white !important;
+    background-color: green;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.remove-location-details {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 13%;
+    left: 93%;
+}
+
+.remove-location-details mat-icon {
+    cursor: pointer;
+}
+
+.remove-location-details mat-icon:hover {
+    color: red;
+}
+
+.add-location-data {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.add-location-data img {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.update-location-details {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 97%;
+    left: 54%;
+    width: 322px;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    border: 1px solid lightgrey;
+    padding-left: 3px;
+    border-radius: 3px;
+}
+
+input:focus {
+    border: 1px solid lightgrey;
+}
+
+.alert {
+    color: red;
+}
+
+.location-form {
+    transform: translate(-6%, -50%);
+    position: absolute;
+    top: 78%;
+    left: 38%;
+}

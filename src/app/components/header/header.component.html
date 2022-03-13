@@ -1,0 +1,16 @@
+<div class="header">
+
+    <img matTooltip="categories" (click)="menuBtn()" src="https://cdn-icons.flaticon.com/png/512/3502/premium/3502685.png?token=exp=1644431491~hmac=e7a76be9a5b5047fc39851e1dfb42904" alt="">
+
+    <img matTooltip="home" (click)="home()" src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="">
+
+    <img *ngIf="adminEntered" matTooltip="create item" routerLink="/create-item" src="https://cdn-icons.flaticon.com/png/512/3384/premium/3384438.png?token=exp=1644838965~hmac=445330eb21cd7cd17739a68869fe062f" alt="">
+
+    <img *ngIf="showLogoutBtn" routerLink="/profile" src=" https://cdn-icons.flaticon.com/png/512/4803/premium/4803103.png?token=exp=1644430763~hmac=4f77f8bfc81177b71ae36db0e09b843b" alt="">
+
+    <img matTooltip="show cart" (click)="cartBtn()" src="https://cdn-icons.flaticon.com/png/512/649/premium/649931.png?token=exp=1644175259~hmac=a6f9007f085edb1314ed2279b1e8c26d" alt="">
+
+    <img *ngIf="showLogoutBtn" (click)="logout()" matTooltip="logout" src="https://cdn-icons.flaticon.com/png/512/2529/premium/2529508.png?token=exp=1644152011~hmac=2e77d6d841ec2e8d5e0151bfe92681dd" alt="">
+
+    <img *ngIf="!showLogoutBtn" matTooltip="login" routerLink="/login" (click)="hidePanels()" src="https://cdn-icons-png.flaticon.com/512/5087/5087592.png" alt="">
+</div>

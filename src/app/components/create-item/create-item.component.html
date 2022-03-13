@@ -1,0 +1,47 @@
+<div class="create-item-icon">
+    <h2>Create new item</h2>
+
+    <img src="https://cdn-icons.flaticon.com/png/512/3384/premium/3384379.png?token=exp=1644838974~hmac=fc56ff5a3136b48ddd59b3872c9aa50f" alt="">
+
+    <img src="https://cdn-icons.flaticon.com/png/512/2961/premium/2961520.png?token=exp=1644431801~hmac=c7145ab30ce2c4c98cf975b4d120d7c7" alt="">
+</div>
+<div *ngIf="showCreateForm" class="createProduct">
+
+    <form #createItem="ngForm">
+
+        <div calss="product-image">
+            <input ngModel #prodImgInput="ngModel" name="prodImg" [(ngModel)]="prodImg" type="text" placeholder="Product Image Src" required>
+            <div class="alert" *ngIf="prodImgInput?.touched && !prodImgInput?.valid">
+                <span *ngIf="prodImgInput?.errors">Product img src is required .</span>
+            </div>
+        </div>
+
+        <div calss="product-name">
+            <input ngModel #prodNameInput="ngModel" name="prodName" [(ngModel)]="prodName" type="text" placeholder="Product Name" required>
+            <div class="alert" *ngIf="prodNameInput?.touched && !prodNameInput?.valid">
+                <span *ngIf="prodNameInput?.errors">Product name is required .</span>
+            </div>
+        </div>
+
+        <div calss="product-price">
+            <input ngModel #prodPriceInput="ngModel" name="prodPrice" [(ngModel)]="prodPrice" type="text" placeholder="Product Price" required>
+            <div class="alert" *ngIf="prodPriceInput?.touched && !prodPriceInput?.valid">
+                <span *ngIf="prodPriceInput?.errors">Product price is required .</span>
+            </div>
+        </div>
+
+        <div class="create-item-category">
+            <mat-form-field>
+                <mat-label>Category:</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let cat of categories" (click)="setCategory(cat)" value="{{cat}}">{{cat}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div><br>
+
+        <div class="create-product-button">
+            <button mat-flat-button (click)="createProduct()">Create Product</button>
+        </div>
+
+    </form>
+</div>

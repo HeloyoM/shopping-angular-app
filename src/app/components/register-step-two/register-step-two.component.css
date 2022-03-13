@@ -1,0 +1,79 @@
+.register-form {
+    border: 2px solid black;
+    height: 500px;
+    width: 412px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 71%;
+    left: 75%;
+    background-color: white;
+}
+
+.register-form-city {
+    width: 150px;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 19px;
+    height: 20px;
+    color: #919191;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.register-form-header {
+    margin-top: 15px;
+    font-size: 1.25em;
+    color: #1a1a1a;
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.register-form-address {
+    margin-top: 30px;
+}
+
+.alert {
+    color: red;
+}
+
+.step-two-icon {
+    transform: translate(50%, 50%);
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+.wallpaper {
+    width: 1516px;
+    height: 1900px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/02/54/84/01/1000_F_254840132_fpRsTo0Gfzg3HRTSDqpCunbAd1kWPOZv.jpg");
+}
+
+.wallpaper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}
+
+video {
+    background-color: grey;
+}
+
+.take-user-image {
+    width: 350px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 38%;
+    position: absolute;
+}
+
+.take-user-image button {
+    width: 174px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #008078;
+    color: white;
+}

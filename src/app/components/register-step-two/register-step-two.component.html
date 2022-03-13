@@ -1,0 +1,50 @@
+<div class="wallpaper">
+    <img src="https://cdn-icons-png.flaticon.com/512/3601/3601634.png" alt="">
+</div>
+<div class="register-form">
+    <h2 class="register-form-header">Sign Up</h2>
+    <h4>Step 2</h4>
+    <form #signupForm="ngForm">
+
+        <div class="register-form-first-name">
+            <input ngModel #firstNameInput="ngModel" name="firstName" (keyup)="setFirstName($event)" type="text" placeholder="First Name" required>
+            <div *ngIf="firstNameInput.touched && !firstNameInput.valid">
+                <div class="alert" *ngIf="firstNameInput.errors">First name is required .</div>
+            </div>
+        </div>
+
+        <div class="register-form-last-name">
+            <input ngModel #lastNameInput="ngModel" name="lastName" (keyup)="setLastName($event)" type="text" placeholder="Last Name" required>
+            <div calss="alert" *ngIf="lastNameInput.touched && !lastNameInput.valid">
+                <div *ngIf="lastNameInput.errors">Last name is required .</div>
+            </div>
+        </div>
+
+        <div class="register-form-city">
+            <mat-form-field>
+                <mat-label>City:</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let city of cities" (click)="setCity(city)" value="{{city}}">{{city}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="register-form-address">
+            <input ngModel #addressInput="ngModel" name="address" (keyup)="setAddress($event)" type="text" placeholder="Address" required>
+            <div class="alert" *ngIf="addressInput.touched && !addressInput.valid">
+                <div *ngIf="addressInput.errors"> Address is required . </div>
+            </div>
+        </div>
+        <div class="register-form-phone">
+            <input ngModel #phoneInput="ngModel" name="phone" (keyup)="setPhone($event)" type="text" placeholder="Phone" required>
+            <div class="alert" *ngIf="phoneInput.touched && !phoneInput.valid">
+                <div *ngIf="phoneInput.errors"> Phone number is required . </div>
+            </div>
+        </div>
+
+        <div class="signup-button">
+            <button [disabled]="signupForm.form.invalid" (click)="addNewUser()" mat-flat-button>Sign Up<mat-icon>done</mat-icon></button>
+        </div>
+    </form>
+
+</div>

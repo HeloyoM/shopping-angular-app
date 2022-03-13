@@ -1,0 +1,61 @@
+<div class="wallpaper">
+    <img src="https://cdn-icons-png.flaticon.com/512/3601/3601002.png" alt="">
+</div>
+<div class="register-form">
+    <h2 class="register-form-header">Sign Up</h2>
+    <h4>step 1</h4>
+    <form #signupForm="ngForm">
+
+        <div class="register-form-name">
+
+            <input ngModel #usernameRef #nameInput="ngModel" name="username" type="text" (keyup)="checkUsername($event)" placeholder="username" [minlength]="4" required><i *ngIf="goodUsername"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png"></i>
+            <i *ngIf="badUsername"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt=""></i>
+            <div class="alert" *ngIf="nameInput.touched">
+                <div *ngIf="nameInput.errors">username is required.</div>
+                <div *ngIf="nameInput?.errors?.['minlength']">username should be minimum 4 characters</div>
+            </div>
+        </div>
+
+        <div class="register-form-email">
+            <input ngModel #emailRef #emailInput="ngModel" (change)="setEmail($event)" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" required>
+            <div class="alert" *ngIf="emailInput?.touched">
+                <div *ngIf="emailInput?.errors">Email is required.</div>
+                <div *ngIf="emailInput?.errors?.['pattern']">invalid email pattern</div>
+                <p *ngIf="emailInUse" class="badInput">Email address allready in user, if you forgot you'r password click
+                    <a routerLink="/login">HERE</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="register-form-password">
+
+            <input ngModel #nameInput="ngModel" name="username" type="text" (change)="checkUsername($event)" placeholder="Name" [minlength]="4" required>
+            <div class="alert" *ngIf="nameInput.touched && !nameInput.valid">
+                <div *ngIf="nameInput?.errors?.['minlength']">Name should be minimum 4 characters</div>
+                <div *ngIf="nameInput.errors">Name is required.</div>
+            </div>
+        </div>
+
+        <div class="register-form-email ">
+            <input ngModel #emailInput="ngModel" (keyup)="setEmail($event)" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" required>
+            <div class="alert " *ngIf="emailInput?.touched && !emailInput?.valid ">
+                <div *ngIf="emailInput.errors ">Email is required.</div>
+                <div *ngIf="emailInput?.errors?.['pattern']">invalid email pattern</div>
+            </div>
+        </div>
+
+        <div class="register-form-password ">
+
+            <input ngModel #passwordInput="ngModel" (keyup)="setPassword($event)" name="password" type="password" placeholder="Password" minlength="6" required>
+            <p>Please enter at least 6 characters</p>
+            <div class="alert " *ngIf="passwordInput?.touched && !passwordInput.valid ">
+                <div *ngIf="passwordInput?.errors?.['minlength']">password should be minimun {{passwordInput?.errors?.['minlength'].requiredLength}} characters</div>
+                <div *ngIf="passwordInput.errors">Password is required .</div>
+            </div>
+        </div>
+
+        <div class="signup-button">
+            <button mat-flat-button [disabled]="signupForm.form.invalid" (click)="registerStepOne()">Sign Up<mat-icon>navigate_next</mat-icon></button>
+        </div>
+    </form>
+</div>

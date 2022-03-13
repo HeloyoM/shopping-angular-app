@@ -1,0 +1,22 @@
+.jumbotron {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+.jumbotroe-img img {
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    height: 600px;
+    width: 97%;
+    border-radius: 52px;
+}
+
+.register-link>a {
+    font-family: Graphik Web, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    color: #333;
+    text-decoration-color: #1eabf9;
+    font-size: 14px;
+    font-style: normal;
+    cursor: pointer;
+}
